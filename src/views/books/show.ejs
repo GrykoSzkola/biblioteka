@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+
+<h2><%= book.title %></h2>
+<p>Autor: <%= book.author %> Rok: <%= book.year %></p>
+<p>Opis: <%= book.description %></p>
+<p>Status: <%= book.status %></p>
+
+
+
+<form action="/books/<%= book._id %>/delete" method="POST">
+    <a href="/books/<%= book._id %>/edit">Edytuj</a>
+    <button>usun</button>
+</form>
+
+<%- include('../partials/footer') %>

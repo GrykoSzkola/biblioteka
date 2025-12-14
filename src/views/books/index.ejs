@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+
+<a href="/books/new">Dodaj książkę</a>
+<ul>
+    <% books.forEach(book => { %>
+    <li>
+        <%= book.title %> (<%= book.status %>)
+        <a href="/books/<%= book._id %>">zobacz</a>
+    </li>
+    <% }) %>
+</ul>
+
+
+<%- include('../partials/footer') %>

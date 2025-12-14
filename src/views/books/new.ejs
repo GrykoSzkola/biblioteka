@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+
+<form action="/books" method="POST">
+    <input name="title" placeholder="tytul" required> <br>
+    <input name="author" placeholder="Autor" required><br>
+    <input name="year" placeholder="Rok"><br>
+    <textarea name="description"></textarea><br>
+    <select name="status"><br>
+    <option>available</option><br>
+    <option>borrowed</option><br>
+    </select>
+    <button>Zapisz</button><br>
+</form>
+
+
+<%- include('../partials/footer') %>

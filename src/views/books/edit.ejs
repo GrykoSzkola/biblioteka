@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+
+<form action="/books/<%= book._id %>/edit" method="POST">
+    <input name="title" value="<%= book.title %>"> <br>
+    <input name="author" value="<%= book.author %>"> <br>
+    <input name="year" value="<%= book.year %>"> <br>
+    <textarea name="description"><%= book.description %></textarea> <br>
+    <select name="status"> <br>
+    <option <%= book.status==='available'?'selected':'' %>>available</option>
+    <option <%= book.status==='borrowed'?'selected':'' %>>borrowed</option>
+    </select>
+    <button>Zapisz</button>
+</form>
+
+
+<%- include('../partials/footer') %>
